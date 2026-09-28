@@ -1,0 +1,20 @@
+﻿{
+    "checkedAt":  "2026-09-28T07:55:54.3358475-04:00",
+    "file":  "demo-config.json",
+    "status":  "CHANGED",
+    "message":  "Configuration settings differ from the baseline.",
+    "changes":  [
+                    {
+                        "field":  "displayInput",
+                        "type":  "MODIFIED",
+                        "oldValue":  "HDMI1",
+                        "newValue":  "HDMI2"
+                    },
+                    {
+                        "field":  "microphoneGainDb",
+                        "type":  "MODIFIED",
+                        "oldValue":  0,
+                        "newValue":  -10
+                    }
+                ]
+}

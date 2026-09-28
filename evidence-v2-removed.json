@@ -1,0 +1,14 @@
+﻿{
+    "checkedAt":  "2026-09-28T07:56:57.0247220-04:00",
+    "file":  "demo-config.json",
+    "status":  "CHANGED",
+    "message":  "Configuration settings differ from the baseline.",
+    "changes":  [
+                    {
+                        "field":  "displayInput",
+                        "type":  "REMOVED",
+                        "oldValue":  "HDMI1",
+                        "newValue":  null
+                    }
+                ]
+}

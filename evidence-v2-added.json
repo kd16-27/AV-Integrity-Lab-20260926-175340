@@ -1,0 +1,14 @@
+﻿{
+    "checkedAt":  "2026-09-28T07:56:34.2372989-04:00",
+    "file":  "demo-config.json",
+    "status":  "CHANGED",
+    "message":  "Configuration settings differ from the baseline.",
+    "changes":  [
+                    {
+                        "field":  "projectorPower",
+                        "type":  "ADDED",
+                        "oldValue":  null,
+                        "newValue":  "On"
+                    }
+                ]
+}

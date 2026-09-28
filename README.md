@@ -78,8 +78,53 @@ that prevented the practice script from running under RemoteSigned.
 
 ## Future Improvements
 
-- Compare individual JSON fields.
 - Check multiple configuration files.
 - Detect added and deleted files.
 - Generate an HTML report.
 - Add automated tests.
+
+## Version 2 — Configuration Field Comparison
+
+The checker now records both a SHA-256 hash and the original
+configuration settings in baseline-v2.json.
+
+It identifies:
+- Modified settings, including old and new values.
+- Added settings and their values.
+- Removed settings and their previous values.
+
+Example output:
+
+    CHANGED : Configuration settings differ from the baseline.
+      displayInput: "HDMI1" -> "HDMI2"
+      microphoneGainDb: 0 -> -10
+
+### Verified Version 2 Tests
+
+| Test | Observed result |
+| --- | --- |
+| Modified microphone gain and display input | Both changes identified |
+| Added projectorPower | ADDED with value "On" |
+| Removed displayInput | REMOVED with previous value "HDMI1" |
+| Restored the exact original configuration | PASS |
+
+### Version 2 Files
+
+- baseline-v2.json: Hash and original configuration settings.
+- original-config-v2.json: Exact restoration copy.
+- evidence-v2-modified.json: Modified-field test result.
+- evidence-v2-added.json: Added-field test result.
+- evidence-v2-removed.json: Removed-field test result.
+
+The script now uses baseline-v2.json. The earlier baseline.json
+is retained from version 1.
+
+### Comparison Scope
+
+Field comparison operates at the top level of the JSON object.
+Nested structures are compared as whole values.
+
+File formatting changes still trigger CHANGED when the byte-level
+hash differs, even if the top-level setting values match.
+
+The baseline must remain trusted and protected.
