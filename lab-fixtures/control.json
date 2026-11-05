@@ -1,0 +1,4 @@
+{
+  "device": "simulated-controller",
+  "settings": {"active_input": "HDMI1", "display": {"power": "on", "blanking": false}}
+}

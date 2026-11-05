@@ -1,0 +1,4 @@
+{
+  "device": "simulated-dsp",
+  "settings": {"aec": true, "mic": {"gain_db": -4, "muted": false}, "output_levels_db": [-10, -10]}
+}
